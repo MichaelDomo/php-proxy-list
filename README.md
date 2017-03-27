@@ -1,4 +1,4 @@
-# Yii2 proxy list
+# PHP proxy list
 
 Generate and store proxy list from site foxtools.ru
 
