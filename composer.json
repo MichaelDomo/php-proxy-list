@@ -14,9 +14,12 @@
     "issues": "https://github.com/MichaelDomo/php-proxy-list/issues?state=open",
     "source": "https://github.com/MichaelDomo/php-proxy-list"
   },
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
   "autoload": {
     "psr-4": {
       "michaeldomo\\proxylist\\": "src/"
     }
-  },
+  }
 }
