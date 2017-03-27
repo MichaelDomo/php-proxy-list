@@ -1,0 +1,22 @@
+{
+  "name": "michaeldomo/php-proxy-list",
+  "description": "Proxy list.",
+  "type": "php-extension",
+  "keywords": ["php", "proxy-list", "proxy list", "proxy"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Michael Domo",
+      "email": "domolazov.michael@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/MichaelDomo/php-proxy-list/issues?state=open",
+    "source": "https://github.com/MichaelDomo/php-proxy-list"
+  },
+  "autoload": {
+    "psr-4": {
+      "michaeldomo\\proxylist\\": "src/"
+    }
+  },
+}
