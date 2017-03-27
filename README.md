@@ -26,4 +26,4 @@ $model = new \michaeldomo\proxylist\FoxtoolsAdapter($path, $cachetime);
 $list = $model->getProxyList();
 ```
 
-or you can add your own adapter.
+or you can add your own adapter, just extend ```michaeldomo\proxylist\BaseProxyList```
