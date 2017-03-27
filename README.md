@@ -1,8 +1,8 @@
-#Yii2 proxy list
+# Yii2 proxy list
 
 Generate and store proxy list from site foxtools.ru
 
-##Installation
+## Installation
 
 The preferred way to install this extension is through composer.
 
@@ -16,7 +16,7 @@ or add
 
 to the require section of your composer.json file.
 
-##Usage
+## Usage
 
 ```
 $path = '@runtime/cache';
