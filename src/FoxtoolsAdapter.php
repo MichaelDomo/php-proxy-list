@@ -22,7 +22,7 @@ class FoxtoolsAdapter extends BaseProxyList
      *
      * @var string
      */
-    private $_url = 'http://api.foxtools.ru/v2/Proxy?uptime=1';
+    private $_url = 'http://api.foxtools.ru/v2/Proxy.txt?uptime=1';
 
     /**
      * Json list of proxies
@@ -48,12 +48,12 @@ class FoxtoolsAdapter extends BaseProxyList
 
     /**
      * @inheritdoc
+     * @return array|null
      */
     public function getResponse()
     {
         if (null === $this->_response) {
-            $response = file_get_contents($this->_url);
-            $this->_response = json_decode((string) $response, true);
+            $this->_response = file($this->_url);
         }
 
         return $this->_response;
@@ -65,16 +65,14 @@ class FoxtoolsAdapter extends BaseProxyList
      */
     protected function generateProxyList()
     {
-        if (false === (bool) ($list = $this->getResponse())) {
-            throw new \InvalidArgumentException('JSON list of proxies not set');
+        if (false === (bool) ($items = $this->getResponse())) {
+            throw new \InvalidArgumentException('List of proxies not set');
         }
-        $proxyList = [];
-        /* @var $items array */
-        $items = $list['response']['items'];
+        $result = [];
         foreach ($items as $item) {
-            $proxyList[] = $item['ip'] . ':' . $item['port'];
+            $result[] = trim($item);
         }
 
-        return $proxyList;
+        return $result;
     }
 }

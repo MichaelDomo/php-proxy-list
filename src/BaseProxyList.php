@@ -57,7 +57,7 @@ abstract class BaseProxyList
     /**
      * Get the response from remote host.
      *
-     * @return string|null
+     * @return array
      */
     abstract public function getResponse();
 
